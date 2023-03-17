@@ -1,6 +1,5 @@
 package ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,12 +9,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginTest {
+public class BasicWebdriverMethodes {
+
 	
 	public static String browser ="chrome";
 	public static WebDriver driver;
-
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
 		if(browser.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -45,12 +45,6 @@ public class LoginTest {
 			
 	
 		driver.get("https://www.saucedemo.com/");
-		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_user");
-		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
-		
-		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
-		//driver.close();
-		
 		
 
 	}
