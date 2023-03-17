@@ -43,8 +43,32 @@ public class BasicWebdriverMethodes {
 	
 		
 			
-	
+	   //Ouvrir un site donné
 		driver.get("https://www.saucedemo.com/");
+		//Agrandir la fenetre du navigateurs
+		driver.manage().window().maximize();
+		
+		//Recupere l'url d'une site donné
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println(currentUrl);
+		
+		//Recuperer le titre d'une page
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		
+		String pagesources = driver.getPageSource();
+		System.out.println(pagesources);
+		
+		//Naviguer sur un site donné
+		driver.navigate().to("");
+		
+		//Ferme le navigateur
+		driver.close();
+		
+		//fermer la fenetre
+		driver.quit();
+		
 		
 
 	}
